@@ -4,4 +4,16 @@ Producer is one of the thread which will produce only one item which is suppose 
 
 Consumer is a thread which will consumer only one item which is produced by producer at any point of time consumer is allowed to consume only one item but not multiple items to consume.
 
-Diagram gives implementation of producer consumer problem: 
+
+
+                                      |---------------------------------------|    
+            (waiting)<----------------|  boolean ValSet = false               |-------------->(waiting)
+                |                     |    int n;                             |                 |
+            (Ready)                   |  synchronized public void put(int i)  |               (Ready)
+                |                     |  synchronized public int get()        |                 |
+            (Running)                 |---------------------------------------|               (Running)  
+                |                                                                               |    
+                |                                                                               |    
+                |                            notify()                                           |      
+            (Producer)      <------------------------------------------------------------->   (Consumer)
+            
