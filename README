@@ -2,7 +2,7 @@ Implementation of Producer Consumer Problem :-
 
 Producer is one of the thread which will produce only one item which is suppose to be consumed by consumer. At any point of time producer is not allowed to produce multipe items.
 
-Consumer is a thread which will consumer only one item which is produced by producer at any point of time consumer is allowed to consume only one item but not multiple items to consume.
+Consumer is a thread which will consume only one item which is produced by producer at any point of time consumer is allowed to consume only one item but not multiple items to consume.
 Diagram gives implementation of producer consumer problem: 
 
 
